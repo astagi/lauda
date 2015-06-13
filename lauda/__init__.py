@@ -1,3 +1,4 @@
-from .stopwatch import StopWatch
+from .stopwatch import StopWatch, StopWatchException
 
-__all__ = ['StopWatch']
+
+__all__ = ['StopWatch', 'StopWatchException']
