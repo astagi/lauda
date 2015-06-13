@@ -7,7 +7,6 @@ You can use lauda `StopWatch` to measure a portion of code
 ```python
 from lauda import StopWatch
 
-
 watch = StopWatch()
 watch.start()
 for i in range(10000000):
@@ -19,7 +18,6 @@ If you want to measure an entire function execution, you can decorate it using t
 
 ```python
 from lauda import stopwatch
-
 
 @stopwatch()
 def awesome_mul(a, b):
