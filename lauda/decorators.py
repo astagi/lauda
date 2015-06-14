@@ -1,27 +1,20 @@
-from functools import wraps
+from functools import wraps, partial
 from .stopwatch import StopWatch
 
 
-def _start_stopwatch(wrapped, callback, args, kwargs):
-    stopwatch = StopWatch()
-    stopwatch.start()
-    ret = wrapped(*args, **kwargs)
-    elapsed = stopwatch.stop()
-    if callback and wrapped is not callback:
-        callback(stopwatch, wrapped)
-    else:
-        print('Executed {0} in {1} seconds'.format(wrapped, elapsed))
-    return ret
+def stopwatch(method=None, callback=None):
+    if method is None:
+        return partial(stopwatch, callback=callback)
 
-
-def stopwatch(callback=None):
-    def stopwatch_decorator(wrapped=None, *args, **kwargs):
-        if wrapped is None:
-            wrapped = callback
-            return _start_stopwatch(wrapped, callback, args, kwargs)
+    @wraps(method)
+    def wrapper(*args, **kwargs):
+        stopwatch = StopWatch()
+        stopwatch.start()
+        ret = method(*args, **kwargs)
+        elapsed = stopwatch.stop()
+        if callback:
+            callback(stopwatch, method)
         else:
-            @wraps(wrapped)
-            def wrapper(*args, **kwargs):
-                return _start_stopwatch(wrapped, callback, args, kwargs)
-            return wrapper
-    return stopwatch_decorator
+            print('Executed {0} in {1} seconds'.format(method, elapsed))
+        return ret
+    return wrapper

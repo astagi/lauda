@@ -19,7 +19,7 @@ If you want to measure an entire function execution, you can decorate it using t
 ```python
 from lauda import stopwatch
 
-@stopwatch()
+@stopwatch
 def awesome_mul(a, b):
     return a * b
 ```

@@ -21,7 +21,7 @@ class TestDecorators(unittest.TestCase):
     @patch('lauda.StopWatch.start')
     def test_stopwatch_callback(self, mock_stopwatch_start, mock_stopwatch_stop):
         my_callback = Mock(return_value=None)
-        @stopwatch(my_callback)
+        @stopwatch(callback=my_callback)
         def my_function(n):
             time.sleep(0.1)
         self.assertFalse(my_callback.called)
