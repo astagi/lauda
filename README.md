@@ -1,4 +1,6 @@
 # Lauda
+[![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
+
 A very simple python module for measuring time.
 
 ## Usage
@@ -36,3 +38,9 @@ def stopwatch_sum_cb(watch, function):
 def awesome_sum(a, b):
     return a + b
 ```
+
+[travis-url]: https://travis-ci.org/astagi/lauda
+[travis-image]: http://img.shields.io/travis/astagi/lauda.svg?branch=master
+
+[coveralls-url]: https://coveralls.io/r/astagi/lauda
+[coveralls-image]: http://img.shields.io/coveralls/astagi/lauda/master.svg
