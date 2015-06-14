@@ -8,6 +8,9 @@ python:
   - 2.7
   - 2.6
 
+before_install:
+  pip install codecov
+
 install:
   - pip install -r requirements-test.txt
 
@@ -16,4 +19,4 @@ before_script:
 
 script: nosetests --with-coverage --cover-package=lauda
 
-after_success: coveralls
+after_success: codecov
