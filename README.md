@@ -1,5 +1,9 @@
 # Lauda
 [![Build Status][travis-image]][travis-url] [![Codecov.io Status][codecovio-image]][codecovio-url]
+[![Latest Version](https://img.shields.io/pypi/v/lauda.svg)](https://pypi.python.org/pypi/lauda/)
+[![Supported Python versions](https://img.shields.io/badge/python-2.7%2C%202.8%2C%203.3%2C%203.4-blue.svg)](https://pypi.python.org/pypi/lauda/)
+[![License](https://img.shields.io/github/license/astagi/lauda.svg)](https://pypi.python.org/pypi/lauda/)
+[![Downloads](https://img.shields.io/pypi/dm/lauda.svg)](https://pypi.python.org/pypi/lauda/)
 
 A very simple python module for measuring time.
 
