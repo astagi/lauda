@@ -6,6 +6,10 @@
 
 A very simple python module for measuring time.
 
+## Install
+
+    pip install lauda
+
 ## Usage
 You can use lauda `StopWatch` to measure a portion of code
 
