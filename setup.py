@@ -22,7 +22,7 @@ classifiers = [
 
 setup(
     name="lauda",
-    version="0.0.0",
+    version="1.0.0",
     packages=find_packages(),
     include_package_data=True,
     description="A very simple python module for measuring time.",
