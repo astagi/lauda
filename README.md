@@ -51,4 +51,4 @@ def awesome_sum(a, b):
 [travis-image]: http://img.shields.io/travis/astagi/lauda.svg?branch=master
 
 [codecovio-url]: http://codecov.io/github/astagi/lauda?branch=master
-[codecovio-image]: http://codecov.io/github/astagi/lauda/coverage.svg?branch=master
+[codecovio-image]: https://img.shields.io/codecov/c/github/astagi/lauda.svg
