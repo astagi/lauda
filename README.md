@@ -47,6 +47,27 @@ def awesome_sum(a, b):
     return a + b
 ```
 
+If you want to measure a block of code, you can use the `stopwatchcm` context manager
+
+```python
+from lauda import stopwatchcm
+
+with stopwatchcm():
+    c = a * b
+```
+
+By default `stopwatchcm` context manager will print the time spent inside the context manager body, if you want more control you can pass to your context manager a callback that will receive a `StopWatch` instance.
+
+```python
+from lauda import stopwatchcm
+
+def stopwatch_sum_cb(watch):
+    print ('Time spent {0}'.format(watch.elapsed_time))
+
+with stopwatchcm(callback=stopwatch_sum_cb):
+    c = a + b
+```
+
 [travis-url]: https://travis-ci.org/astagi/lauda
 [travis-image]: http://img.shields.io/travis/astagi/lauda.svg?branch=master
 
