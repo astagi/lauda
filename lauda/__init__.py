@@ -10,7 +10,7 @@ from .stopwatch import StopWatch, StopWatchException
 from .decorators import stopwatch
 from .contextmanager import stopwatch as stopwatchcm
 
-__version__ = '1.0.0'
+__version__ = '1.1.0'
 __author__ = 'Andrea Stagi'
 __license__ = 'MIT'
 
