@@ -12,7 +12,7 @@ A very simple python module for measuring time.
     pip install lauda
 
 ## Usage
-You can use lauda `StopWatch` to measure a portion of code
+You can use lauda `StopWatch` to measure the time spent in a portion of code
 
 ```python
 from lauda import StopWatch
@@ -24,6 +24,24 @@ for i in range(10000000):
 watch.stop()
 print ('Time spent in range {0}'.format(watch.elapsed_time))
 ```
+
+You can call checkpoint function if you want to set a checkpoint and get the time spent between the last checkpoint:
+
+```python
+from lauda import StopWatch
+
+watch = StopWatch()
+watch.start()
+for i in range(10000000):
+    pass
+check_time = watch.checkpoint()
+print ('Time spent in first range: {0} sec.'.format(check_time))
+for i in range(10000000):
+    pass
+check_time = watch.checkpoint()
+print ('Time spent in second range: {0} sec.'.format(check_time))
+```
+
 If you want to measure an entire function execution, you can decorate it using the `stopwatch` decorator
 
 ```python
