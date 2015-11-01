@@ -31,3 +31,17 @@ print ('Time spent in range: {0} sec.'.format(watch.elapsed_time))
 
 with stopwatchcm(callback=stopwatch_sum_cb_w_cm):
     c = 5 * 10
+
+watch = StopWatch()
+watch.start()
+for i in range(10000000):
+    pass
+print ('Time spent in first range: {0} sec.'.format(watch.checkpoint()))
+for i in range(10000000):
+    pass
+print ('Time spent in second range: {0} sec.'.format(watch.checkpoint()))
+for i in range(10000000):
+    pass
+print ('Time spent in third range: {0} sec.'.format(watch.checkpoint()))
+watch.stop()
+print ('Time spent in range total: {0} sec.'.format(watch.elapsed_time))
