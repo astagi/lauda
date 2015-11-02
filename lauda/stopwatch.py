@@ -37,4 +37,7 @@ class StopWatch():
 
     @property
     def elapsed_time(self):
-        return (self._stop - self._start)
+        current_time = self._stop
+        if not current_time:
+            current_time = time.time()
+        return (current_time - self._start)

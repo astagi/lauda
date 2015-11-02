@@ -24,6 +24,9 @@ awesome_print()
 
 watch = StopWatch()
 watch.start()
+for i in range(100000):
+    pass
+print ('Time is running out.. {0} sec.'.format(watch.elapsed_time))
 for i in range(10000000):
     pass
 watch.stop()

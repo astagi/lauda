@@ -20,3 +20,11 @@ class TestStopwatch(unittest.TestCase):
     def test_stopwatch_exceptions(self):
         stopwatch = StopWatch()
         self.assertRaises(StopWatchException, stopwatch.stop)
+
+    def test_elapsed_time(self):
+        stopwatch = StopWatch()
+        start_time = stopwatch.start()
+        elapsed_time_ongoing = stopwatch.elapsed_time
+        elapsed_time_final = stopwatch.stop()
+        self.assertTrue(elapsed_time_ongoing > 0)
+        self.assertTrue(elapsed_time_ongoing < elapsed_time_final)
