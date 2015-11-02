@@ -24,6 +24,8 @@ for i in range(10000000):
 watch.stop()
 print ('Time spent in range {0}'.format(watch.elapsed_time))
 ```
+You can also get the `elapsed_time` when the stopwatch is running
+
 If you want to measure an entire function execution, you can decorate it using the `stopwatch` decorator
 
 ```python
