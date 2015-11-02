@@ -28,3 +28,8 @@ class TestStopwatch(unittest.TestCase):
         elapsed_time_final = stopwatch.stop()
         self.assertTrue(elapsed_time_ongoing > 0)
         self.assertTrue(elapsed_time_ongoing < elapsed_time_final)
+
+    def test_elapsed_time_zero(self):
+        stopwatch = StopWatch()
+        elapsed_time_ongoing = stopwatch.elapsed_time
+        self.assertEqual(elapsed_time_ongoing, 0)
